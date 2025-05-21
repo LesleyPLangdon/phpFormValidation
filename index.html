@@ -28,13 +28,15 @@
         <!-- Requirement: Minimum 3 characters -->
         <label for="username">Username: </label>
         <input type="text" id="username" name="username">
-        
+    </br>
 
         <!-- Task 2: Email - Must be a valid email format -->
         <!-- Create an email input with the id 'email' -->
         <!-- Requirement: Must be a valid email address -->
-        
-     
+        <label for="email">Email: </label>
+        <!-- using text because we want to validate in js-->
+        <input type="text" id="email" name="email">
+    </br>
 
         <!-- Task 3: Phone Number - 10 digits in 123-456-7890 format -->
         <!-- Create a text input for the phone number with the id 'phone' -->
@@ -59,6 +61,7 @@
         
 
         <!-- Submit Button -->
+    </br>
         <button type="submit" onclick="validateForm()">Submit</button>
      </form>
    <script src="script.js"></script>
