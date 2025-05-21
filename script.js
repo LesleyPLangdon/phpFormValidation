@@ -2,15 +2,17 @@
 
 // Task 1: Validate the form on submit
 // Implement a validateForm() function that will run when the form is submitted
-
+function validateForm() {
 
     // Task 2: Retrieve form values
     // Get the values of the username, email, phone, password, and confirm password inputs
-
+    let username = document.getElementById("username").value;
   
 
     // Task 3: Validate Username - Minimum 3 characters
-   
+   if (username.length < 3) {
+    alert("User name must be at least three characters long.");
+   }
 
 
 
@@ -40,4 +42,4 @@
 
 
     // Task 9: If all validations pass, submit the form
-
+}

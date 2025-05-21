@@ -22,11 +22,12 @@
  <body>
       <h1>User Profile Form</h1>
     <!-- Main form for user profile creation -->
-    
+    <form>
         <!-- Task 1: Username - Minimum 3 characters -->
         <!-- Create a text input for the username with the id 'username' -->
         <!-- Requirement: Minimum 3 characters -->
-
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username">
         
 
         <!-- Task 2: Email - Must be a valid email format -->
@@ -58,8 +59,8 @@
         
 
         <!-- Submit Button -->
-
-     
+        <button type="submit" onclick="validateForm()">Submit</button>
+     </form>
    <script src="script.js"></script>
     </body>
 </html>
