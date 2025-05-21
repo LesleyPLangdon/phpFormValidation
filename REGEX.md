@@ -1,155 +1,114 @@
-🔍 RegExr Demonstration Examples
-Use these examples in RegExr.com to demonstrate key regex concepts. Each includes a short activity for students to try.
+# 🔍 Regular Expressions Practice Assignment
 
-✳️ 1. Exact Match
-Match: RegExr
+**Objective:** Practice using regular expressions to match specific patterns in text using [RegExr.com](https://regexr.com).
 
-RegExr
-Now You Try It:
-Match the word Tests exactly.
+Use this sample sentence throughout the activity:
 
-✳️ 2. Escaping Special Characters
-Match: gskinner.com
+> _Save and Share your expression or edit mode at gskinner.com in 2024 with "Tools", "Replace", and Explore features._
 
-gskinner\.com
-Now You Try It:
-Match .mode including the dot.
+---
 
-✳️ 3. Alternation (OR)
-Match: PCRE or JavaScript
+## 🧠 Demonstration Examples (With Explanation & Student Challenge)
 
-PCRE|JavaScript
-Now You Try It:
-Match either Save or Share.
+---
 
-✳️ 4. Character Classes + Quantifiers
-Match: gskinner
+### 🎯 Concept: Exact Word Match  
+**Target Match:** `expression`  
+**Regex Pattern:**  
+    expression  
+✏️ **Now You Try It:** Match the word `mode`  
+✅ Solution:  
+    mode
 
-[a-z]+
-Now You Try It:
-Match any lowercase word.
+---
 
-✳️ 5. Capitalized Words
-Match: Save, Share, Validate
+### 🎯 Concept: Capitalized Words  
+**Target Match:** Words like `Save`, `Share`, `Explore`  
+**Regex Pattern:**  
+    \b[A-Z][a-z]+\b  
+✏️ **Now You Try It:** Match `Replace`, `Tools`  
+✅ Solution:  
+    \b[A-Z][a-z]+\b
 
-\b[A-Z][a-z]+\b
-Now You Try It:
-Match capitalized words that are 5 or more letters.
+---
 
-✳️ 6. Escaping Ampersand (&)
-Match: Save & Share
+### 🎯 Concept: Domain Name  
+**Target Match:** `gskinner.com`  
+**Regex Pattern:**  
+    \w+\.com  
+✏️ **Now You Try It:** Match `example.net` (if added)  
+✅ Solution:  
+    \w+\.net
 
-Save \& Share
-Now You Try It:
-Match Explore & Replace
+---
 
-✳️ 7. Word Boundaries + Literal Match
-Match: .com and My
+### 🎯 Concept: Alternation (OR)  
+**Target Match:** `Save` or `Share`  
+**Regex Pattern:**  
+    Save|Share  
+✏️ **Now You Try It:** Match `Tools` or `Replace`  
+✅ Solution:  
+    Tools|Replace
 
-\.com|\bMy\b
-Now You Try It:
-Match the whole word Help and any .net (if added).
+---
 
-✳️ 8. Words Ending in "ed"
-Match: created, supported
+### 🎯 Concept: Digits (Numbers)  
+**Target Match:** `2024`  
+**Regex Pattern:**  
+    \d+  
+✏️ **Now You Try It:** Match 4-digit numbers only  
+✅ Solution:  
+    \b\d{4}\b
 
-\b\w+ed\b
-Now You Try It:
-Match any word ending in ing.
+---
 
-✳️ 9. Digits (if added manually)
-Match: 123, 2024 (add to text)
+### 🎯 Concept: 3-Letter Words  
+**Target Match:** `and`, `the` (if added)  
+**Regex Pattern:**  
+    \b\w{3}\b  
+✏️ **Now You Try It:** Match 2-letter words  
+✅ Solution:  
+    \b\w{2}\b
 
-\d+
-Now You Try It:
-Match only 4-digit numbers.
+---
 
-✳️ 10. Optional Suffix (Plural)
-Match: Pattern / Patterns
+### 🎯 Concept: Match Lines That Contain a Word  
+**Target Match:** Any line with the word `mode`  
+**Regex Pattern:**  
+    ^.*mode.*$  
+✏️ **Now You Try It:** Match any line with `Share`  
+✅ Solution:  
+    ^.*Share.*$
 
-\b[A-Za-z]+s?\b
-Now You Try It:
-Match “Result” and “Results”.
+---
 
-🧠 Student Practice Challenges (with Solutions)
-Use these to reinforce key regex skills. Students can try each on RegExr.com while you guide or display hints.
+### 🎯 Concept: Case-Insensitive Match  
+**Target Match:** Any version of `save` (e.g., Save, SAVE)  
+**Regex Pattern:**  
+    save  
+*Use the “i” flag*  
+✏️ **Now You Try It:** Match `tools`, `TOOLS`, `Tools`  
+✅ Solution:  
+    tools  (with `i` flag enabled)
 
-🧩 1. Exact Word Match
-Match: expression
+---
 
-expression
-Now You Try It:
-Match the word mode
-mode
+### 🎯 Concept: Quoted Text  
+**Target Match:** `"Tools"`, `"Replace"`  
+**Regex Pattern:**  
+    \"[^\"]+\"  
+✏️ **Now You Try It:** Match `"Save"` and `"Share"`  
+✅ Solution:  
+    \"[^\"]+\"
 
-🧩 2. Capitalized Words
-Match: Words beginning with capital letters
+---
 
-\b[A-Z][a-z]+\b
-Now You Try It:
-Match Explore, Tools, and Replace
-\b[A-Z][a-z]+\b
+### 🎯 Concept: Lowercase Words (4+ Letters)  
+**Target Match:** `your`, `expression`, `features`  
+**Regex Pattern:**  
+    \b[a-z]{4,}\b  
+✏️ **Now You Try It:** Match 6+ letter lowercase words  
+✅ Solution:  
+    \b[a-z]{6,}\b
 
-🧩 3. Domain Match
-Match: Words ending in .com
-
-\w+\.com
-Now You Try It:
-Match gskinner.info (if added)
-\w+\.info
-
-🧩 4. Alternation (OR)
-Match: Save or Share
-
-Save|Share
-Now You Try It:
-Match Create or Edit (if added)
-Create|Edit
-
-🧩 5. Digits
-Match: Numbers like 123, 2024 (add to text)
-
-\d+
-Now You Try It:
-Match only 4-digit numbers
-\b\d{4}\b
-
-🧩 6. 3-Letter Words
-Match: Any 3-letter word
-
-\b\w{3}\b
-Now You Try It:
-Match 2-letter words
-\b\w{2}\b
-
-🧩 7. Lines Containing a Word
-Match: Any line containing mode
-
-^.*mode.*$
-Now You Try It:
-Match lines containing Share
-^.*Share.*$
-
-🧩 8. Case-Insensitive Word Match
-Match: all variations of you (e.g., You, YOU)
-
-you with the i (ignore case) flag enabled
-Now You Try It:
-Match all versions of save
-save with i flag on
-
-🧩 9. Quoted Text
-Match: Any text in quotes, like "Details"
-
-\"[^\"]+\"
-Now You Try It:
-Match "Share" and "Tools"
-\"[^\"]+\"
-
-🧩 10. Lowercase Words 4+ Letters
-Match: Lowercase words with 4 or more letters
-
-\b[a-z]{4,}\b
-Now You Try It:
-Match lowercase words with 6 or more letters
-\b[a-z]{6,}\b
+---
